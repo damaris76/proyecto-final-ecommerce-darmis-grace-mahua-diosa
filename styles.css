@@ -1,0 +1,393 @@
+/*------- ESTILOS  GENERAL DE PAGINA--------*/
+ 
+                                /*   header  */
+   /* flex box interno*/
+    #titulo_principal{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin:0;
+}
+    #titulo_principal h1{
+          color: rgb(64, 119, 190); /* color del titulo principal de fondo*/
+          font-style: italic;
+          margin:0;
+
+    }
+    
+/*contenedor padre*/
+.nav-list {
+    display:flex;
+    justify-content: space-between;
+    text-decoration:none;
+    list-style:none;/* elimina los puntos de las listas*/
+    padding: 10px 30px;
+    margin: 0;
+    color:rgb(64, 119, 190);
+    background-color: rgb(255, 190, 243);
+    font-size:25px; 
+    gap: 15px;
+    align-items:center;
+}
+/* estilo de letra del menu*/
+.nav-list a {
+    text-decoration:none;
+    color: rgb(64, 119, 190);
+    font-weight:bold;
+    font-style: italic;
+    font-size:  22px;
+}
+ 
+.nav-list a:hover {
+    color:  rgb(243, 238, 238);
+    transform: translateY(-2px)
+}
+
+/* estilo de subtitulos*/
+h1 {
+   font-size: 2rem;
+   font-weight: bold;
+   font-style: italic;
+   color: blue;
+}
+
+
+h3{
+   font-size: 2rem;
+   font-weight: bold;
+   font-style: italic;
+   color: rgb(18, 17, 90);
+}
+
+h2{
+   font-size: 2rem;
+   font-weight: bold;
+   font-style: italic;
+   color: rgb(8, 66, 141);
+}
+                             /*  MAIN  */
+    /*imagen de fondo hero  */
+   .hero {
+    width: 100%;                                 
+   height: 100vh;                               
+   margin: 0 auto;
+   display: flex;
+   align-items:center;
+   filter: saturate(.92);
+   background: #efe6d8;
+   background-image: url('imagen/moda1.jpg');
+   background-size:cover;
+   background-position:center  ;
+   background-repeat: no-repeat;
+   position: relative;
+
+  }
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(246,240,231,.92) 0%, rgba(246,240,231,.48) 39%, rgba(246,240,231,.08) 68%),
+        linear-gradient(0deg, rgba(18,14,17,.28), transparent 32%);
+        display: flex;
+    flex-direction: column;   
+    justify-content: center;  
+    align-items: flex-start;  
+    padding-left: 8%;         
+    box-sizing: border-box
+
+}
+
+
+.myButton {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 25px;
+    background:black;
+    color: rgb(252, 247, 247);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    transition: transform .2s, background .2s;
+    bottom:none ;
+}
+
+.myButton:hover {
+    background:#e44aca;
+    transform: translateY(-2px);
+}
+
+/* usando google fonts*/
+body{
+  font-family: "Playfair Display", "DM Sans" serif;
+  font-optical-sizing: auto;
+  font: weight 400px;;
+  font-style:georgia ;
+}
+
+   /*   seccion productos responsiva con flex  */
+
+   .productos{
+      display:flex;
+      flex-wrap: wrap;
+      gap:20px;
+      justify-content: center;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin:  0 auto;;
+}
+ 
+.section-heading{
+   grid-column: 1/-1;
+   text-align: end;
+   margin-bottom: 40px;
+}
+.section-heading p{
+   font-size: 0.9rem;
+   letter-spacing: 2px;
+   color: palevioletred;
+
+}
+.eyebrow {
+    font-family: 'Playfair Display', serif; /* Usa tu fuente elegante */
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    line-height: 1.3;
+}
+
+/* tarjeta individual*/
+
+ .cards-producto {
+   flex:1 1 300px;
+   max-width: 360px;
+   background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+ }
+.cards-producto:hover{
+   transform: translate(-5px);
+   box-shadow: 0 10px 20 rgb(0,0,0,0.5);
+}
+  /* ajustamos la foto cartera asi no se desforma*/
+  .cartera{
+   width: 100%;
+   height: 340px;
+   object-fit: cover;
+  }
+  .mono1{
+   width: 100%;
+   height: 340px;
+   object-fit: cover
+  }
+  .taco{
+   width: 100%;
+   height: 340px;
+   object-fit: cover
+  }
+  .vestido7{
+   width: 100%;
+   height: 340px;
+   object-fit: cover
+  }
+  /* todos los textos internos*/
+.producto-descripcion{
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   text-align: 1 ;
+}
+.producto-descripcion h2{
+   font-family: "playfair display",serif;
+   font-size: 1.4rem;
+   margin-bottom: 10px;
+   color: #1a1a1a;
+}
+.producto-descripcion p{
+   font-size: 0.95rem;
+   color:#161515;
+   margin-bottom: 15px;
+   line-height: 1.4;
+   flex-grow: 1;
+}
+  /* precio destacado*/
+  .precio-destacado{
+   font-size: 1.25rem;
+   font-weight: 700;
+   color: #000000;
+   display: block;
+   margin-bottom: 15px;
+  }
+
+  /* diseño boton agregar al carrito*/
+  .boton-comprar{
+   width: 100%;
+   background-color: #000000;
+   color: #ffffff;
+   border: none;
+   padding: 12px;
+   font-size: 0.9rem;
+   font-weight:600px;
+   text-transform:uppercase;
+   letter-spacing:1px;
+   display: flex;
+   align-items:center;
+   justify-content:center;
+   gap: 10px;
+   transition:background-color 0.3s ease;
+}
+  
+  .boton-comprar:hover {
+    background-color: #e44aca; /* cambia color al clikear  */
+}
+
+                          /*RESEÑAS*/
+
+.resenas{
+   padding:60px 5%;
+   background-color:#f5f3f1;
+   text-align: center;
+}    
+
+.resenas h3{
+   font-size:24px;
+   margin-bottom:35px;
+   text-transform: uppercase;
+   letter-spacing:.14em;
+   color:#120e11;
+  }
+ .contenedor-grid-resenas{
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+   gap:25px;
+   width:100%;
+  }
+ .carta-resena{
+   background-color: hsl(330, 50%, 95%);
+   padding:25px;
+   border-radius:6px;
+   box-shadow:0 4px 12px rgba(0,0,0,0.05);
+   text-align: left;
+   box-sizing: border-box;
+   transition: transform 0.3s ease;
+  }
+ .carta-resena:hover{
+   transform:translateY(-5px);
+  }
+ .estrellas{
+   color: #e44aca;
+   font-size: 18px;
+   margin-bottom:25px;
+}
+.comentario{
+   font-style: italic;
+   color:#555555;
+   line-height: 1.6;
+   font-size: 14px;
+   margin-bottom:15px;
+ }
+.cliente{
+   font-weight: 700;
+   text-transform: uppercase;
+   font-size: 12px;
+   letter-spacing: 0.05em;
+   color: #120e11;
+  }
+      /* MEDIA QUERY   */
+
+.contacto{
+   padding: 80px 8%;
+   background-color:#f5f3f1;
+   font-family: sans-serif;
+}
+.contacto-contenedor{
+   display:flex;
+   gap:60px;
+   max-width: 1100px;
+   margin: 0 auto;
+   align-items: center;
+}
+.contacto-info{
+   flex: 1;
+}
+.contacto-info h2{
+   font-size: 26px;
+   text-transform: uppercase;
+   letter-spacing: 0.14em;
+   color: #120e11;
+   margin-bottom: 20px;
+}
+.contacto-info p{
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 20px;
+}
+.datos-lista p {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+.contacto-formulario-bloque {
+  flex: 1; 
+  background-color: #ffffff; /* Caja blanca para el formulario */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.formulario-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-datos input, 
+.formulario-datos textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #efe6d8;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .contacto {
+    padding: 50px 5%; 
+  }
+
+  .contacto-contenedor {
+    flex-direction: column; 
+    gap: 40px;
+  }
+
+  .contacto-info {
+    text-align: center; /* Centre el texto para que se lea mejor en celulares */
+  }
+
+  .contacto-formulario-bloque {
+    width: 100%; /* El formulario toma todo el ancho del celular */
+    box-sizing: border-box;
+  }
+}
+               /*   footer   */
+
+ .section-pag1{
+
+   display:flex;
+    justify-content: space-between;
+    text-decoration:none;
+    list-style:none;/* elimina los puntos de las listas*/
+    padding: 10px 30px;
+    margin: 0;
+    color:rgb(64, 119, 190);
+    background-color: rgb(255, 190, 243);
+    font-size:25px; 
+    gap: 15px;
+    align-items:center;
+   }              
+
