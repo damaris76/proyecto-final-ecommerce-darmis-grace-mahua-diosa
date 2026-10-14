@@ -1,8 +1,20 @@
 /*------- ESTILOS  GENERAL DE PAGINA--------*/
  
-                                /*   header  */
-   /* flex box interno*/
-    #titulo_principal{
+                                /*   header y navegacion */
+   
+    
+/*contenedor padre del navegador*/
+.nav_contenedor_principal {
+    display:flex;
+    justify-content: space-between;/*menu va hacia la derecha */
+    padding: 10px 30px;
+    margin: 0;
+    background-color: rgb(255, 190, 243);
+    font-size:25px; 
+    gap: 15px;
+    align-items:center;           /*centra todo vertical*/
+}
+ #titulo_principal{
         display: flex;
         align-items: center;
         gap: 15px;
@@ -12,35 +24,30 @@
           color: rgb(64, 119, 190); /* color del titulo principal de fondo*/
           font-style: italic;
           margin:0;
+          font-size: 2rem;
 
     }
-    
-/*contenedor padre*/
-.nav-list {
-    display:flex;
-    justify-content: space-between;
-    text-decoration:none;
-    list-style:none;/* elimina los puntos de las listas*/
-    padding: 10px 30px;
-    margin: 0;
-    color:rgb(64, 119, 190);
-    background-color: rgb(255, 190, 243);
-    font-size:25px; 
-    gap: 15px;
-    align-items:center;
-}
+    /*caja contenedora del menu*/
+    .menu-navegacion {
+      display:flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 15px;
+    }
 /* estilo de letra del menu*/
-.nav-list a {
+.menu-navegacion a {
     text-decoration:none;
     color: rgb(64, 119, 190);
     font-weight:bold;
     font-style: italic;
     font-size:  22px;
 }
- 
-.nav-list a:hover {
+ .menu-navegacion a:hover {
     color:  rgb(243, 238, 238);
-    transform: translateY(-2px)
+    display: inline-block;
+    transform: translateY(-2px);
+    transition:transform 0.2s ease,color 0.2s ease;
 }
 
 /* estilo de subtitulos*/
@@ -119,10 +126,10 @@ h2{
 
 /* usando google fonts*/
 body{
-  font-family: "Playfair Display", "DM Sans" serif;
+  font-family: "Playfair Display", "DM Sans",serif;
   font-optical-sizing: auto;
-  font: weight 400px;;
-  font-style:georgia ;
+  font-weight:  400;
+  font-style:italic ;
 }
 
    /*   seccion productos responsiva con flex  */
@@ -134,7 +141,7 @@ body{
       justify-content: center;
       padding: 40px 20px;
       max-width: 1200px;
-      margin:  0 auto;;
+      margin:  0 auto;
 }
  
 .section-heading{
@@ -171,7 +178,7 @@ body{
  }
 .cards-producto:hover{
    transform: translate(-5px);
-   box-shadow: 0 10px 20 rgb(0,0,0,0.5);
+   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
   /* ajustamos la foto cartera asi no se desforma*/
   .cartera{
