@@ -50,6 +50,24 @@
     transition:transform 0.2s ease,color 0.2s ease;
 }
 
+             /*    media query  para el navegador*/
+
+      @media ( max-width:768px){
+      .nav_contenedor_principal{
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 15px;
+        text-align: center;
+      }
+
+      .menu-navegacion{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      }       
+
+
 /* estilo de subtitulos*/
 h1 {
    font-size: 2rem;
